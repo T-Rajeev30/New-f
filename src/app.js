@@ -13,6 +13,7 @@ import alertRoutes from "../src/routes/alerts.routes.js";
 import forecastRoutes from "./routes/forecastMl.routes.js";
 import simulationMlRoutes from "./routes/simulationMl.routes.js";
 import forecastMlRoutes from "./routes/forecastMl.routes.js";
+import agentsRoutes from "./routes/agents.routes.js";
 
 const app = express();
 
@@ -31,6 +32,7 @@ app.use("/api", alertRoutes);
 app.use("/api", forecastRoutes);
 app.use("/api", simulationMlRoutes);
 app.use("/api", forecastMlRoutes);
+app.use("/api", agentsRoutes);
 
 app.use((req, res) => res.status(404).json({ message: "Not found" }));
 
